@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ochrana osobných údajov — Fažo</title>
+<meta name="description" content="Ako aplikácia Fažo zaobchádza s údajmi. Prezývka a ročník zostávajú v zariadení. Žiadne reklamy, žiadne sledovanie.">
+<style>
+:root{
+  --paper:#FBFAF7;
+  --ink:#1B2430;
+  --muted:#5A6675;
+  --rule:#C9D1D9;
+  --accent:#2E6F5E;
+  --accent-soft:#E8F0EC;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:41rem;margin:0 auto;padding:3.5rem 1.5rem 5rem}
+
+/* --- hlavička --- */
+.eyebrow{
+  font-size:.7rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:600;
+  margin:0 0 .9rem;
+}
+h1{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(2rem,6vw,2.7rem);
+  line-height:1.15;
+  letter-spacing:-.01em;
+  margin:0 0 .6rem;
+}
+.dateline{
+  color:var(--muted);
+  font-size:.9rem;
+  margin:0;
+}
+
+/* --- notová osnova ako predel --- */
+.staff{
+  height:26px;
+  margin:2.6rem 0;
+  position:relative;
+  background:repeating-linear-gradient(
+    to bottom,
+    var(--rule) 0, var(--rule) 1px,
+    transparent 1px, transparent 6px
+  );
+  background-size:100% 26px;
+  background-repeat:no-repeat;
+}
+.staff::after{
+  content:"";
+  position:absolute;
+  left:2.2rem;
+  top:8px;
+  width:11px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  transform:rotate(-18deg);
+}
+
+/* --- zhrnutie --- */
+.summary{
+  background:var(--accent-soft);
+  border-left:3px solid var(--accent);
+  padding:1.4rem 1.5rem;
+  margin:0 0 .5rem;
+}
+.summary h2{
+  font-family:var(--sans);
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 .8rem;
+  font-weight:700;
+}
+.summary ul{margin:0;padding-left:1.1rem}
+.summary li{margin:.45rem 0}
+
+/* --- text --- */
+h2{
+  font-family:var(--serif);
+  font-size:1.32rem;
+  font-weight:600;
+  line-height:1.3;
+  margin:2.6rem 0 .7rem;
+}
+p{margin:0 0 1rem}
+ul{padding-left:1.2rem}
+li{margin:.35rem 0}
+strong{font-weight:600}
+a{color:var(--accent);text-underline-offset:.18em}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.note{
+  color:var(--muted);
+  font-size:.92rem;
+}
+.fill{
+  background:#FFF3CD;
+  padding:0 .25em;
+  border-bottom:1px dashed #B8952F;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.4rem;
+  border-top:1px solid var(--rule);
+  color:var(--muted);
+  font-size:.86rem;
+}
+@media (max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:2.5rem 1.2rem 4rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Fažo — hudobná náuka</p>
+  <h1>Ochrana osobných údajov</h1>
+  <p class="dateline">Platné od 30. augusta 2026</p>
+
+  <div class="staff"></div>
+
+  <div class="summary">
+    <h2>V skratke</h2>
+    <ul>
+      <li>Prezývka a ročník zostávajú v telefóne. Neodosielajú sa nám a nevidíme ich.</li>
+      <li>Aplikácia odosiela iba anonymné hlásenia o páde, aby sa dali opraviť chyby.</li>
+      <li>Žiadne reklamy, žiadne sledovanie, žiadne účty, žiadny predaj údajov.</li>
+    </ul>
+  </div>
+
+  <h2>Kto za aplikáciu zodpovedá</h2>
+  <p>
+    Prevádzkovateľom je Filip Kotus, fyzická osoba.
+    Kontakt: <a href="mailto:devcts20000@gmail.com">devcts20000@gmail.com</a>.
+  </p>
+
+  <h2>Aké údaje aplikácia spracúva</h2>
+  <p>
+    Pri prvom spustení si dieťa zvolí <strong>prezývku</strong> a <strong>ročník</strong>.
+    Prezývka nemusí byť skutočné meno — aplikácia to pri zadávaní výslovne uvádza.
+    Ročník slúži na to, aby sa zobrazoval obsah zodpovedajúci úrovni štúdia.
+  </p>
+  <p>
+    Popri tom si aplikácia ukladá <strong>herný postup</strong>: body, úrovne, získané odmeny
+    a stav jednotlivých svetov.
+  </p>
+  <p>
+    Všetky tieto údaje sa ukladajú <strong>výlučne do pamäte zariadenia</strong>.
+    Neodosielajú sa na žiadny server a nemáme k nim prístup.
+  </p>
+
+  <h2>Zálohovanie systémom Android</h2>
+  <p>
+    Ak má zariadenie zapnuté zálohovanie Androidu, systém môže tieto údaje zálohovať
+    na účet Google patriaci majiteľovi zariadenia — vďaka tomu sa postup v hre dá preniesť
+    na nový telefón. Túto zálohu spravuje Google pre majiteľa zariadenia, nie pre nás,
+    a my k nej nemáme prístup. Zálohovanie sa dá vypnúť v nastaveniach systému Android.
+  </p>
+
+  <h2>Hlásenia o páde aplikácie</h2>
+  <p>
+    Keď aplikácia spadne, odošle technické hlásenie, aby sme chybu vedeli nájsť a opraviť.
+    Hlásenie obsahuje model zariadenia, verziu operačného systému, verziu aplikácie
+    a miesto v kóde, kde chyba nastala.
+  </p>
+  <p>
+    <strong>Hlásenie neobsahuje prezývku, ročník, herný postup ani IP adresu.</strong>
+    Ukladanie IP adries je na strane služby vypnuté.
+  </p>
+  <p>
+    Hlásenia spracúva služba Sentry na serveroch v Nemecku, teda v rámci Európskej únie.
+    Právnym základom je oprávnený záujem na tom, aby aplikácia fungovala spoľahlivo
+    (čl. 6 ods. 1 písm. f nariadenia GDPR).
+  </p>
+
+  <h2>Čo aplikácia nerobí</h2>
+  <ul>
+    <li>Nezobrazuje reklamy.</li>
+    <li>Nepoužíva analytické ani reklamné nástroje na sledovanie správania.</li>
+    <li>Nevyžaduje registráciu ani prihlásenie.</li>
+    <li>Nepristupuje k polohe, kontaktom, fotografiám ani mikrofónu.</li>
+    <li>Neposkytuje ani nepredáva žiadne údaje tretím stranám.</li>
+  </ul>
+
+  <h2>Deti</h2>
+  <p>
+    Aplikácia je určená deťom vo veku približne 6 až 15 rokov a je navrhnutá tak,
+    aby od nich nezbierala osobné údaje. Preto sa pýta na prezývku, nie na meno,
+    a nič z toho, čo dieťa v aplikácii zadá alebo dosiahne, neopúšťa jeho zariadenie.
+  </p>
+
+  <h2>Vymazanie údajov</h2>
+  <p>
+    V aplikácii v časti <strong>Nastavenia → Údaje → Vymazať moje údaje</strong>
+    sa dá jedným úkonom vymazať všetko: prezývka, ročník aj celý herný postup.
+    Aplikácia sa vráti do stavu ako po prvej inštalácii.
+  </p>
+  <p>
+    Keďže žiadne osobné údaje neuchovávame na svojej strane, nevieme ich k nikomu priradiť.
+    Ak máte akúkoľvek otázku k svojim právam podľa GDPR — právo na prístup, opravu, výmaz
+    alebo namietanie — napíšte nám a odpovieme.
+  </p>
+
+  <h2>Zmeny tohto dokumentu</h2>
+  <p>
+    Ak sa spôsob spracúvania údajov zmení, aktualizujeme túto stránku
+    a zmeníme dátum uvedený v jej záhlaví.
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    Otázky, pripomienky aj žiadosti podľa GDPR posielajte na
+    <a href="mailto:devcts20000@gmail.com">devcts20000@gmail.com</a>.
+  </p>
+  <p class="note">
+    Ak nie ste spokojní s tým, ako sme vašu žiadosť vybavili, máte právo podať sťažnosť
+    Úradu na ochranu osobných údajov Slovenskej republiky.
+  </p>
+
+  <footer>
+    Fažo — doplnková aplikácia na precvičovanie hudobnej náuky.
+    Neslúži ako náhrada riadneho štúdia na ZUŠ.
+  </footer>
+
+</div>
+</body>
+</html>
